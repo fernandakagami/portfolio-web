@@ -10,7 +10,7 @@ import {
 	DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 
-export default function DropdownHeader() {
+export default function DropdownMobile() {
 	return (
 		<DropdownMenu>
 			<DropdownMenuTrigger asChild className="not-sr-only md:sr-only">

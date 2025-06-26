@@ -4,7 +4,7 @@ import Link from "next/link";
 import { Icon } from "@iconify/react";
 import { Pacifico } from "next/font/google";
 
-import DropdownHeader from "../DropdownHeader";
+import DropdownMobile from "../DropdownMobile";
 
 const pacifico = Pacifico({ weight: ["400"], subsets: ["latin"] });
 
@@ -15,7 +15,7 @@ export default function Menu() {
 				<h1 className="text-5xl">Fer.</h1>
 			</div>
 
-			<DropdownHeader />
+			<DropdownMobile />
 
 			<ul className="sr-only mt-10 mb-40 flex flex-col justify-center gap-4 md:not-sr-only">
 				<li className="cursor-pointer">

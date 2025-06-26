@@ -17,7 +17,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="pt">
-			<body className={`flex ${open.className} w-screen flex-col md:flex-row`}>
+			<body className={`flex ${open.className} max-w-screen flex-col md:flex-row`}>
 				<Menu />
 				<main className="w-full">{children}</main>
 			</body>
