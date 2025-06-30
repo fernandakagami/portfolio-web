@@ -4,7 +4,7 @@ import { MyImage } from "../MyImage";
 
 export function AboutMe() {
 	return (
-		<section className="mx-auto flex w-full flex-col items-center justify-evenly gap-10 px-10 md:max-w-5xl md:flex-row md:px-0">
+		<section className="mx-auto flex h-screen w-full flex-col items-center justify-evenly gap-10 px-10 md:max-w-5xl md:flex-row md:px-0">
 			<section className="flex flex-col items-start justify-center gap-1">
 				<h1 className="mb-4 text-6xl font-bold uppercase">Fernanda Lima</h1>
 
