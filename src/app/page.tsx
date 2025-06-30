@@ -5,6 +5,7 @@ import Experiences from "@/shared/components/Experiences";
 import FooterMobile from "@/shared/components/FooterMobile";
 import { MyImage } from "@/shared/components/MyImage";
 import { Projects } from "@/shared/components/Projects";
+import { Services } from "@/shared/components/Services";
 
 export default function Home() {
 	return (
@@ -13,6 +14,7 @@ export default function Home() {
 				<AboutMe />
 				<Experiences />
 				<Projects />
+				<Services />
 			</main>
 
 			<MyImage className="not-sr-only p-10 md:sr-only" />
