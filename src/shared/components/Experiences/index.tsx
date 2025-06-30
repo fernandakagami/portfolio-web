@@ -7,9 +7,9 @@ import { Card, CardContent } from "@/components/ui/card";
 import { allExperience } from "@/shared/data/experience-parser";
 import { EExperience } from "@/shared/enums/experience";
 
-export default function Experience() {
+export default function Experiences() {
 	return (
-		<section className="flex h-[450px] w-full flex-col items-start justify-center gap-10 px-10 pb-10">
+		<section className="flex w-full flex-col items-start justify-center gap-10 px-10 pb-10">
 			<h2 className="text-4xl">
 				Experiências{" "}
 				<span className="inline-block bg-gradient-to-r from-pink-500 via-indigo-400 to-orange-500 bg-clip-text text-3xl font-bold text-transparent">
