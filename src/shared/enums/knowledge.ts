@@ -1,0 +1,12 @@
+export enum EKnowledge {
+	HTML = "HMTL",
+	CSS = "CSS",
+	JAVASCRIPT = "JAVASCRIPT",
+	TYPESCRIPT = "TYPESCRIPT",
+	REACT = "REACT",
+	NEXT = "NEXT",
+	NATIVE = "NATIVE",
+	VUE = "VUE",
+	SASS = "SASS",
+	TAILWIND = "TAILWIND",
+}
