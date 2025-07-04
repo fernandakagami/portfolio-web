@@ -10,52 +10,52 @@ export const knowledgeParsed: Record<
 > = {
 	[EKnowledge.HTML]: {
 		value: EKnowledge.HTML,
-		label: "Desenvolvedora Frontend",
+		label: "HTML",
 		icon: "flowbite:html-solid",
 	},
 	[EKnowledge.CSS]: {
 		value: EKnowledge.CSS,
-		label: "Desenvolvedora Frontend",
+		label: "CSS",
 		icon: "flowbite:css-solid",
 	},
 	[EKnowledge.SASS]: {
 		value: EKnowledge.SASS,
-		label: "Desenvolvedora Frontend",
+		label: "SASS",
 		icon: "fa6-brands:sass",
 	},
 	[EKnowledge.JAVASCRIPT]: {
 		value: EKnowledge.JAVASCRIPT,
-		label: "Desenvolvedora Frontend",
+		label: "JAVASCRIPT",
 		icon: "bi:javascript",
 	},
 	[EKnowledge.REACT]: {
 		value: EKnowledge.REACT,
-		label: "Desenvolvedora Frontend",
+		label: "REACT",
 		icon: "simple-icons:react",
 	},
 	[EKnowledge.NEXT]: {
 		value: EKnowledge.NEXT,
-		label: "Desenvolvedora Frontend",
-		icon: "skill-icons:nextjs-light",
+		label: "NEXT",
+		icon: "devicon:nextjs",
 	},
 	[EKnowledge.NATIVE]: {
 		value: EKnowledge.NATIVE,
-		label: "Desenvolvedora Frontend",
+		label: "REACT NATIVE",
 		icon: "simple-icons:react",
 	},
 	[EKnowledge.TAILWIND]: {
 		value: EKnowledge.TAILWIND,
-		label: "Desenvolvedora Frontend",
+		label: "TAILWIND",
 		icon: "lineicons:tailwindcss",
 	},
 	[EKnowledge.TYPESCRIPT]: {
 		value: EKnowledge.TYPESCRIPT,
-		label: "Desenvolvedora Frontend",
+		label: "TYPESCRIPT",
 		icon: "bi:typescript",
 	},
 	[EKnowledge.VUE]: {
 		value: EKnowledge.VUE,
-		label: "Desenvolvedora Frontend",
+		label: "VUE",
 		icon: "devicon:vuejs",
 	},
 };

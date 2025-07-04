@@ -4,9 +4,9 @@ import { MyImage } from "../MyImage";
 
 export function AboutMe() {
 	return (
-		<section className="mx-auto flex h-screen w-full flex-col items-center justify-evenly gap-10 px-10 md:max-w-5xl md:flex-row md:px-0">
-			<section className="flex flex-col items-start justify-center gap-1">
-				<h1 className="mb-4 text-6xl font-bold uppercase">Fernanda Lima</h1>
+		<section className="mx-auto flex h-full w-full flex-col items-center justify-evenly gap-10 px-10 pt-16 md:h-screen md:max-w-5xl md:flex-row md:px-0 md:pt-0">
+			<section className="flex w-full flex-col items-start justify-center gap-1">
+				<h1 className="mb-4 text-5xl font-bold uppercase md:text-6xl">Fernanda Lima</h1>
 
 				<h3
 					className="inline-block bg-gradient-to-r from-pink-500 via-indigo-400 to-orange-500 bg-clip-text text-3xl font-bold text-transparent"

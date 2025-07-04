@@ -11,7 +11,7 @@ import { Services } from "@/shared/components/Services";
 export default function Home() {
 	return (
 		<>
-			<main className="mx-auto flex min-h-screen max-w-5xl flex-col items-center justify-evenly gap-10">
+			<main className="mx-auto flex max-w-5xl flex-col items-center justify-evenly gap-2 md:gap-0">
 				<AboutMe />
 				<Experiences />
 				<Projects />

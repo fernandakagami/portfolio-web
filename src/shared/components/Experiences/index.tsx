@@ -9,7 +9,7 @@ import { EExperience } from "@/shared/enums/experience";
 
 export default function Experiences() {
 	return (
-		<section className="flex w-full flex-col items-start justify-center gap-10 px-10 pb-10">
+		<section className="flex w-full flex-col items-start justify-center gap-10 px-10 pb-10 md:px-0 md:pb-16">
 			<h2 className="text-4xl">
 				Experiências{" "}
 				<span className="inline-block bg-gradient-to-r from-pink-500 via-indigo-400 to-orange-500 bg-clip-text text-3xl font-bold text-transparent">
@@ -23,7 +23,7 @@ export default function Experiences() {
 						{allExperience.map((experience) => (
 							<AccordionItem value={experience.value} key={experience.value}>
 								<AccordionTrigger>
-									<div className="flex w-full flex-row items-center justify-between">
+									<div className="item-start flex w-full cursor-pointer flex-col justify-between gap-2 md:flex-row md:items-center md:gap-0">
 										<span className="text-xl font-bold">{experience.label}</span>
 										<span>{experience.period}</span>
 									</div>
