@@ -1,4 +1,13 @@
-import { BookOpenText, CircleUser, ClipboardList, HandPlatter, Menu, Phone, Presentation } from "lucide-react";
+import {
+	ArrowUpRight,
+	BookOpenText,
+	CircleUser,
+	ClipboardList,
+	HandPlatter,
+	Menu,
+	Phone,
+	Presentation,
+} from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -46,6 +55,11 @@ export default function DropdownMobile() {
 					</DropdownMenuItem>
 				</DropdownMenuGroup>
 				<DropdownMenuSeparator />
+
+				<DropdownMenuItem>
+					<ArrowUpRight size={25} />
+					ENGLISH
+				</DropdownMenuItem>
 			</DropdownMenuContent>
 		</DropdownMenu>
 	);

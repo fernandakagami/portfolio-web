@@ -1,9 +1,8 @@
 "use client";
 
-import { Icon } from "@iconify/react/dist/iconify.js";
-
-import { Card, CardContent } from "@/components/ui/card";
 import { allKnowledge } from "@/shared/data/knowledge-parser";
+
+import { KnowledgeModal } from "../KnowledgeModal";
 
 export function Knowledge() {
 	return (
@@ -16,13 +15,8 @@ export function Knowledge() {
 			</h2>
 
 			<div className="mx-auto grid grid-cols-2 gap-4 md:grid-cols-4">
-				{allKnowledge.map((knowledge) => (
-					<Card className="w-full max-w-sm cursor-pointer" key={knowledge.icon}>
-						<CardContent className="flex flex-col items-center justify-center gap-2">
-							<Icon icon={knowledge.icon} width="60" height="60" />
-							<p className="text-gray-500">{knowledge.label}</p>
-						</CardContent>
-					</Card>
+				{allKnowledge.map((knowledge, index) => (
+					<KnowledgeModal knowledge={knowledge} key={index} />
 				))}
 			</div>
 		</section>

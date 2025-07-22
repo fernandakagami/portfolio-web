@@ -3,6 +3,9 @@
 import Link from "next/link";
 import { Icon } from "@iconify/react";
 import { Pacifico } from "next/font/google";
+import { ArrowUpRight } from "lucide-react";
+
+import { Button } from "@/components/ui/button";
 
 import DropdownMobile from "../DropdownMobile";
 
@@ -34,7 +37,7 @@ export default function Menu() {
 					<Link href="/rooms">CONHECIMENTOS</Link>
 				</li>
 				<li className="cursor-pointer">
-					<Link href="/rooms">CONTATOS</Link>
+					<Link href="/rooms">CONTATO</Link>
 				</li>
 			</ul>
 
@@ -53,6 +56,11 @@ export default function Menu() {
 						<p>Linkedin</p>
 					</li>
 				</ul>
+
+				<Button className="mb-10 w-full cursor-pointer bg-transparent bg-gradient-to-r from-pink-300 via-indigo-200 to-orange-300 text-black hover:bg-gradient-to-r hover:from-pink-400 hover:via-purple-500 hover:to-yellow-500 hover:font-bold hover:text-white">
+					<span>English</span>
+					<ArrowUpRight />
+				</Button>
 
 				<p className="text-xs">©{`${new Date().getFullYear()}`} Fernanda Lima.</p>
 				<p className="text-xs">Todos os direitos reservados.</p>
