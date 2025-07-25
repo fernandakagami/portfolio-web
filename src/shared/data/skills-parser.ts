@@ -58,7 +58,7 @@ export const skillsParsed: Record<
 		label: "REACT NATIVE",
 		icon: "simple-icons:react",
 		color: "hover:text-cyan-400",
-		description: "Framework para desenvolvimento de aplicativos móveis usando React.",
+		description: "Framework para desenvolvimento de aplicativos móveis.",
 	},
 	[ESkills.TAILWIND]: {
 		value: ESkills.TAILWIND,
