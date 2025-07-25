@@ -18,8 +18,12 @@ import {
 	DropdownMenuSeparator,
 	DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { useLanguage } from "@/shared/contexts/language.context";
+import { languagesParsed } from "@/shared/data/languages-parser";
 
 export default function DropdownMobile() {
+	const { handleTranslatedText, toggleLanguage, language } = useLanguage();
+
 	return (
 		<DropdownMenu>
 			<DropdownMenuTrigger asChild className="not-sr-only md:sr-only">
@@ -31,34 +35,34 @@ export default function DropdownMobile() {
 				<DropdownMenuGroup>
 					<DropdownMenuItem>
 						<CircleUser />
-						SOBRE MIM
+						<p className="">{handleTranslatedText("Menu", "About")}</p>
 					</DropdownMenuItem>
 					<DropdownMenuItem>
 						<ClipboardList />
-						EXPERIÊNCIAS
+						<p>{handleTranslatedText("Menu", "Experiences")}</p>
 					</DropdownMenuItem>
 					<DropdownMenuItem>
 						<Presentation />
-						PROJETOS
+						<p>{handleTranslatedText("Menu", "Projects")}</p>
 					</DropdownMenuItem>
 					<DropdownMenuItem>
 						<HandPlatter />
-						SERVIÇOS
+						<p>{handleTranslatedText("Menu", "Services")}</p>
 					</DropdownMenuItem>
 					<DropdownMenuItem>
 						<BookOpenText />
-						CONHECIMENTOS
+						<p>{handleTranslatedText("Menu", "Skills")}</p>
 					</DropdownMenuItem>
 					<DropdownMenuItem>
 						<Phone />
-						CONTATOS
+						<p>{handleTranslatedText("Menu", "Contact")}</p>
 					</DropdownMenuItem>
 				</DropdownMenuGroup>
 				<DropdownMenuSeparator />
 
-				<DropdownMenuItem>
+				<DropdownMenuItem onClick={() => toggleLanguage()}>
 					<ArrowUpRight size={25} />
-					ENGLISH
+					<p>{languagesParsed[language]?.label}</p>
 				</DropdownMenuItem>
 			</DropdownMenuContent>
 		</DropdownMenu>

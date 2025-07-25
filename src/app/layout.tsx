@@ -4,6 +4,8 @@ import "./globals.css";
 
 import Menu from "../shared/components/Menu";
 
+import { Providers } from "./providers";
+
 const open = Open_Sans({ weight: ["400", "700"], subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -18,8 +20,10 @@ export default function RootLayout({
 	return (
 		<html lang="pt">
 			<body className={`flex ${open.className} max-w-screen flex-col md:flex-row`}>
-				<Menu />
-				<main className="w-full">{children}</main>
+				<Providers>
+					<Menu />
+					<main className="w-full">{children}</main>
+				</Providers>
 			</body>
 		</html>
 	);

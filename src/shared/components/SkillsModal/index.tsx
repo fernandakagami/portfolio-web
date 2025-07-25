@@ -3,7 +3,7 @@ import { Icon } from "@iconify/react/dist/iconify.js";
 import { Card, CardContent } from "@/components/ui/card";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 
-type KnowledgeModalProps = {
+type SkillsModalProps = {
 	knowledge: {
 		color: string;
 		icon: string;
@@ -12,7 +12,7 @@ type KnowledgeModalProps = {
 	};
 };
 
-export function KnowledgeModal({ knowledge }: KnowledgeModalProps) {
+export function SkillsModal({ knowledge }: SkillsModalProps) {
 	return (
 		<Dialog>
 			<DialogTrigger asChild>

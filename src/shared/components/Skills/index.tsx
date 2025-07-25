@@ -1,10 +1,10 @@
 "use client";
 
-import { allKnowledge } from "@/shared/data/knowledge-parser";
+import { allSkills } from "@/shared/data/skills-parser";
 
-import { KnowledgeModal } from "../KnowledgeModal";
+import { SkillsModal } from "../SkillsModal";
 
-export function Knowledge() {
+export function Skills() {
 	return (
 		<section className="flex w-full flex-col items-start justify-center gap-10 px-10 pb-10 md:pb-16">
 			<h2 className="text-4xl">
@@ -15,8 +15,8 @@ export function Knowledge() {
 			</h2>
 
 			<div className="mx-auto grid grid-cols-2 gap-4 md:grid-cols-4">
-				{allKnowledge.map((knowledge, index) => (
-					<KnowledgeModal knowledge={knowledge} key={index} />
+				{allSkills.map((skill, index) => (
+					<SkillsModal knowledge={skill} key={index} />
 				))}
 			</div>
 		</section>

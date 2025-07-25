@@ -1,17 +1,17 @@
-import { EExperience } from "../enums/experience";
+import { EExperiences } from "../enums/experiences";
 
-export const experienceParsed: Record<
-	EExperience,
+export const experiencesParsed: Record<
+	EExperiences,
 	{
-		value: EExperience;
+		value: EExperiences;
 		company: string;
 		label: string;
 		period: string;
 		description: string[];
 	}
 > = {
-	[EExperience.PLAN]: {
-		value: EExperience.PLAN,
+	[EExperiences.PLAN]: {
+		value: EExperiences.PLAN,
 		company: "Grupo Plan Marketing",
 		label: "Desenvolvedora Frontend",
 		period: "junho de 2025 - presente",
@@ -27,8 +27,8 @@ export const experienceParsed: Record<
 			"Familiaridade com Git, GitHub e fluxo de versionamento (branches, PRs, code review)",
 		],
 	},
-	[EExperience.BNP]: {
-		value: EExperience.BNP,
+	[EExperiences.BNP]: {
+		value: EExperiences.BNP,
 		company: "BNP - Soluções em TI",
 		label: "Desenvolvedora Frontend",
 		period: "fevereiro de 2024 - junho de 2025",
@@ -42,8 +42,8 @@ export const experienceParsed: Record<
 			"Familiaridade com Git, Azure DevOps e fluxo de versionamento (branches, PRs, code review)",
 		],
 	},
-	[EExperience.PLUS]: {
-		value: EExperience.PLUS,
+	[EExperiences.PLUS]: {
+		value: EExperiences.PLUS,
 		company: "3C Plus",
 		label: "Desenvolvedora Frontend",
 		period: "junho de 2023 - fevereiro de 2024",
@@ -60,8 +60,8 @@ export const experienceParsed: Record<
 			"Trabalho conjunto com profissionais UX e UI",
 		],
 	},
-	[EExperience.PLURAL]: {
-		value: EExperience.PLURAL,
+	[EExperiences.PLURAL]: {
+		value: EExperiences.PLURAL,
 		company: "Instituição Sociedade Plural",
 		label: "Desenvolvedora Frontend",
 		period: "novembro de 2022 - junho de 2023",
@@ -72,8 +72,8 @@ export const experienceParsed: Record<
 			"Trabalho conjunto com profissionais UX e UI",
 		],
 	},
-	[EExperience.LIBRING]: {
-		value: EExperience.LIBRING,
+	[EExperiences.LIBRING]: {
+		value: EExperiences.LIBRING,
 		company: "Libring",
 		label: "Estagiária de Desenvolvimento",
 		period: "agosto de 2018 - novembro de 2018",
@@ -87,4 +87,4 @@ export const experienceParsed: Record<
 	},
 };
 
-export const allExperience = Object.values(experienceParsed);
+export const allExperiences = Object.values(experiencesParsed);

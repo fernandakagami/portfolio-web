@@ -4,8 +4,8 @@ import { Dot } from "lucide-react";
 
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Card, CardContent } from "@/components/ui/card";
-import { allExperience } from "@/shared/data/experience-parser";
-import { EExperience } from "@/shared/enums/experience";
+import { allExperiences } from "@/shared/data/experiences-parser";
+import { EExperiences } from "@/shared/enums/experiences";
 
 export default function Experiences() {
 	return (
@@ -19,8 +19,8 @@ export default function Experiences() {
 
 			<Card className="w-full">
 				<CardContent className="w-full">
-					<Accordion type="single" collapsible className="w-full" defaultValue={EExperience.PLAN}>
-						{allExperience.map((experience) => (
+					<Accordion type="single" collapsible className="w-full" defaultValue={EExperiences.PLAN}>
+						{allExperiences.map((experience) => (
 							<AccordionItem value={experience.value} key={experience.value}>
 								<AccordionTrigger>
 									<div className="item-start flex w-full cursor-pointer flex-col justify-between gap-2 md:flex-row md:items-center md:gap-0">

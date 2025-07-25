@@ -1,4 +1,4 @@
-export enum EExperience {
+export enum EExperiences {
 	PLAN = "PLAN",
 	BNP = "BNP",
 	PLUS = "PLUS",

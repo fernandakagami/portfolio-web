@@ -1,17 +1,21 @@
 "use client";
 
-import Link from "next/link";
 import { Icon } from "@iconify/react";
 import { Pacifico } from "next/font/google";
 import { ArrowUpRight } from "lucide-react";
+import Link from "next/link";
 
 import { Button } from "@/components/ui/button";
+import { useLanguage } from "@/shared/contexts/language.context";
+import { languagesParsed } from "@/shared/data/languages-parser";
 
 import DropdownMobile from "../DropdownMobile";
 
 const pacifico = Pacifico({ weight: ["400"], subsets: ["latin"] });
 
 export default function Menu() {
+	const { handleTranslatedText, toggleLanguage, language } = useLanguage();
+
 	return (
 		<div className="sticky left-0 flex h-24 w-screen flex-row items-center justify-between bg-black py-0 ps-10 pe-10 text-white md:top-0 md:h-screen md:w-72 md:flex-col md:items-start md:py-24 md:ps-12 md:pe-0">
 			<div className={pacifico.className}>
@@ -22,22 +26,22 @@ export default function Menu() {
 
 			<ul className="sr-only mt-10 mb-40 flex flex-col justify-center gap-4 md:not-sr-only">
 				<li className="cursor-pointer">
-					<Link href="/">SOBRE MIM</Link>
+					<Link href="/">{handleTranslatedText("Menu", "About")}</Link>
 				</li>
 				<li className="cursor-pointer">
-					<Link href="/about">EXPERIÊNCIAS</Link>
+					<Link href="/about">{handleTranslatedText("Menu", "Experiences")}</Link>
 				</li>
 				<li className="cursor-pointer">
-					<Link href="/rooms">PROJETOS</Link>
+					<Link href="/rooms">{handleTranslatedText("Menu", "Projects")}</Link>
 				</li>
 				<li className="cursor-pointer">
-					<Link href="/rooms">SERVIÇOS</Link>
+					<Link href="/rooms">{handleTranslatedText("Menu", "Services")}</Link>
 				</li>
 				<li className="cursor-pointer">
-					<Link href="/rooms">CONHECIMENTOS</Link>
+					<Link href="/rooms">{handleTranslatedText("Menu", "Skills")}</Link>
 				</li>
 				<li className="cursor-pointer">
-					<Link href="/rooms">CONTATO</Link>
+					<Link href="/rooms">{handleTranslatedText("Menu", "Contact")}</Link>
 				</li>
 			</ul>
 
@@ -57,13 +61,16 @@ export default function Menu() {
 					</li>
 				</ul>
 
-				<Button className="mb-10 w-full cursor-pointer bg-transparent bg-gradient-to-r from-pink-300 via-indigo-200 to-orange-300 text-black hover:bg-gradient-to-r hover:from-pink-400 hover:via-purple-500 hover:to-yellow-500 hover:font-bold hover:text-white">
-					<span>English</span>
+				<Button
+					className="mb-10 w-full cursor-pointer bg-transparent bg-gradient-to-r from-pink-300 via-indigo-200 to-orange-300 text-black hover:bg-gradient-to-r hover:from-pink-400 hover:via-purple-500 hover:to-yellow-500 hover:font-bold hover:text-white"
+					onClick={() => toggleLanguage()}
+				>
+					<span>{languagesParsed[language]?.label}</span>
 					<ArrowUpRight />
 				</Button>
 
 				<p className="text-xs">©{`${new Date().getFullYear()}`} Fernanda Lima.</p>
-				<p className="text-xs">Todos os direitos reservados.</p>
+				<p className="text-xs">{handleTranslatedText("Menu", "Rights")}</p>
 			</div>
 		</div>
 	);

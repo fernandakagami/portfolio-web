@@ -21,6 +21,7 @@ const eslintConfig = [
 		],
 		plugins: ["prettier", "jsx-a11y"],
 		rules: {
+			"@typescript-eslint/no-explicit-any": "off",
 			"prettier/prettier": [
 				"error",
 				{

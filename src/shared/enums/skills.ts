@@ -1,4 +1,4 @@
-export enum EKnowledge {
+export enum ESkills {
 	HTML = "HMTL",
 	CSS = "CSS",
 	JAVASCRIPT = "JAVASCRIPT",
