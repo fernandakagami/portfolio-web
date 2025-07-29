@@ -2,11 +2,11 @@
 
 import { Icon } from "@iconify/react";
 import { Pacifico } from "next/font/google";
-import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 
-import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/shared/contexts/language.context";
+import { ELanguages } from "@/shared/enums/languages";
+import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 import { languagesParsed } from "@/shared/data/languages-parser";
 
 import DropdownMobile from "../DropdownMobile";
@@ -14,10 +14,10 @@ import DropdownMobile from "../DropdownMobile";
 const pacifico = Pacifico({ weight: ["400"], subsets: ["latin"] });
 
 export default function Menu() {
-	const { handleTranslatedText, toggleLanguage, language } = useLanguage();
+	const { handleTranslatedText, toggleLanguage } = useLanguage();
 
 	return (
-		<div className="sticky left-0 flex h-24 w-screen flex-row items-center justify-between bg-black py-0 ps-10 pe-10 text-white md:top-0 md:h-screen md:w-72 md:flex-col md:items-start md:py-24 md:ps-12 md:pe-0">
+		<div className="sticky left-0 flex h-24 w-screen flex-row items-center justify-between bg-black py-0 ps-10 pe-10 text-white sm:top-0 sm:h-screen sm:w-72 sm:flex-col sm:items-start sm:py-24 sm:ps-12 sm:pe-0">
 			<div className={pacifico.className}>
 				<h1 className="text-5xl">Fer.</h1>
 			</div>
@@ -61,13 +61,37 @@ export default function Menu() {
 					</li>
 				</ul>
 
-				<Button
-					className="mb-10 w-full cursor-pointer bg-transparent bg-gradient-to-r from-pink-300 via-indigo-200 to-orange-300 text-black hover:bg-gradient-to-r hover:from-pink-400 hover:via-purple-500 hover:to-yellow-500 hover:font-bold hover:text-white"
-					onClick={() => toggleLanguage()}
-				>
-					<span>{languagesParsed[language]?.label}</span>
-					<ArrowUpRight />
-				</Button>
+				<div className="mb-3 flex flex-row items-center gap-3">
+					<Tooltip>
+						<TooltipTrigger>
+							<Icon
+								icon="twemoji:flag-brazil"
+								width="40"
+								height="40"
+								className="cursor-pointer"
+								onClick={() => toggleLanguage(ELanguages.PT)}
+							/>
+						</TooltipTrigger>
+						<TooltipContent>
+							<p>{languagesParsed[ELanguages.PT].label}</p>
+						</TooltipContent>
+					</Tooltip>
+
+					<Tooltip>
+						<TooltipTrigger>
+							<Icon
+								icon="twemoji:flag-united-states"
+								width="40"
+								height="40"
+								className="cursor-pointer"
+								onClick={() => toggleLanguage(ELanguages.EN)}
+							/>
+						</TooltipTrigger>
+						<TooltipContent>
+							<p>{languagesParsed[ELanguages.EN].label}</p>
+						</TooltipContent>
+					</Tooltip>
+				</div>
 
 				<p className="text-xs">©{`${new Date().getFullYear()}`} Fernanda Lima.</p>
 				<p className="text-xs">{handleTranslatedText("Menu", "Rights")}</p>

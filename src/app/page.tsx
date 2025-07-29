@@ -9,7 +9,7 @@ import { Services } from "@/shared/components/Services";
 export default function Home() {
 	return (
 		<>
-			<main className="mx-auto flex max-w-5xl flex-col items-center justify-evenly gap-2 md:gap-0">
+			<main className="mx-auto flex max-w-5xl flex-col items-center justify-evenly gap-2 sm:gap-0">
 				<AboutMe />
 				<Experiences />
 				<Projects />
@@ -17,7 +17,7 @@ export default function Home() {
 				<Skills />
 			</main>
 
-			<MyImage className="not-sr-only p-10 md:sr-only" />
+			<MyImage className="not-sr-only p-10 sm:sr-only" />
 
 			<FooterMobile />
 		</>

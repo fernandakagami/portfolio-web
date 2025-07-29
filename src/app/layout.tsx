@@ -19,10 +19,10 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="pt">
-			<body className={`flex ${open.className} max-w-screen flex-col md:flex-row`}>
+			<body className={`flex ${open.className} max-w-screen flex-col sm:flex-row`}>
 				<Providers>
 					<Menu />
-					<main className="w-full">{children}</main>
+					<main className="w-full px-0 sm:px-10">{children}</main>
 				</Providers>
 			</body>
 		</html>

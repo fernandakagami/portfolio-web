@@ -1,13 +1,5 @@
-import {
-	ArrowUpRight,
-	BookOpenText,
-	CircleUser,
-	ClipboardList,
-	HandPlatter,
-	Menu,
-	Phone,
-	Presentation,
-} from "lucide-react";
+import { BookOpenText, CircleUser, ClipboardList, HandPlatter, Menu, Phone, Presentation } from "lucide-react";
+import { Icon } from "@iconify/react/dist/iconify.js";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -20,13 +12,14 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { useLanguage } from "@/shared/contexts/language.context";
 import { languagesParsed } from "@/shared/data/languages-parser";
+import { ELanguages } from "@/shared/enums/languages";
 
 export default function DropdownMobile() {
-	const { handleTranslatedText, toggleLanguage, language } = useLanguage();
+	const { handleTranslatedText, toggleLanguage } = useLanguage();
 
 	return (
 		<DropdownMenu>
-			<DropdownMenuTrigger asChild className="not-sr-only md:sr-only">
+			<DropdownMenuTrigger asChild className="not-sr-only sm:sr-only">
 				<Button variant="outline" className="text-black">
 					<Menu />
 				</Button>
@@ -58,11 +51,29 @@ export default function DropdownMobile() {
 						<p>{handleTranslatedText("Menu", "Contact")}</p>
 					</DropdownMenuItem>
 				</DropdownMenuGroup>
+
 				<DropdownMenuSeparator />
 
-				<DropdownMenuItem onClick={() => toggleLanguage()}>
-					<ArrowUpRight size={25} />
-					<p>{languagesParsed[language]?.label}</p>
+				<DropdownMenuItem onClick={() => toggleLanguage(ELanguages.PT)}>
+					<Icon
+						icon="twemoji:flag-brazil"
+						width="40"
+						height="40"
+						className="cursor-pointer"
+						onClick={() => toggleLanguage(ELanguages.PT)}
+					/>
+					<p>{languagesParsed[ELanguages.PT]?.label}</p>
+				</DropdownMenuItem>
+
+				<DropdownMenuItem onClick={() => toggleLanguage(ELanguages.EN)}>
+					<Icon
+						icon="twemoji:flag-united-states"
+						width="40"
+						height="40"
+						className="cursor-pointer"
+						onClick={() => toggleLanguage(ELanguages.EN)}
+					/>
+					<p>{languagesParsed[ELanguages.EN]?.label}</p>
 				</DropdownMenuItem>
 			</DropdownMenuContent>
 		</DropdownMenu>

@@ -9,7 +9,7 @@ import { ELanguages } from "../enums/languages";
 
 type TLanguageContextProps = {
 	language: ELanguages;
-	toggleLanguage: () => void;
+	toggleLanguage: (newLanguage: ELanguages) => void;
 	getLocale: () => string | undefined;
 	handleTranslatedText: (key: string, value: string) => string;
 };
@@ -19,8 +19,8 @@ const LanguageContext = createContext<TLanguageContextProps | null>(null);
 export const LanguageProvider = ({ children }: { children: ReactNode }) => {
 	const [language, setLanguage] = useState<ELanguages>(ELanguages.PT);
 
-	const toggleLanguage = () => {
-		const newLanguage = language === ELanguages.EN ? ELanguages.PT : ELanguages.EN;
+	const toggleLanguage = (newLanguage: ELanguages) => {
+		console.log("Language changed to:", newLanguage);
 		localStorage.setItem("locale", newLanguage);
 		setLanguage(newLanguage);
 	};
@@ -32,7 +32,7 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
 	}
 
 	function handleTranslatedText(key: string, value: string): string {
-		const translations: any = language === ELanguages.EN ? pt : en;
+		const translations: any = language === ELanguages.EN ? en : pt;
 
 		const result: any = translations[key][value];
 
