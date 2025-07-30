@@ -23,13 +23,10 @@ export function Services() {
 						<CardTitle>
 							<FolderCode />
 						</CardTitle>
-						<CardDescription>Desenvolvimento</CardDescription>
+						<CardDescription>{handleTranslatedText("Services", "Type")}</CardDescription>
 					</CardHeader>
 					<CardContent>
-						<p className="text-sm">
-							Desenvolvimento frontend de sites profissionais, blogs, SaaS, landing pages, ecommerce. sistemas, entre
-							outros.
-						</p>
+						<p className="text-sm">{handleTranslatedText("Services", "Description")}</p>
 					</CardContent>
 				</Card>
 			</div>

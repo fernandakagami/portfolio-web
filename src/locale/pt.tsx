@@ -97,6 +97,9 @@ export const pt = {
 	},
 	Services: {
 		Title: "Serviços",
+		Type: "Desenvolvimento Web",
+		Description:
+			"Desenvolvimento frontend de sites profissionais, blogs, SaaS, landing pages, ecommerce. sistemas, entre outros.",
 	},
 	Skills: {
 		Title: "Habilidades",

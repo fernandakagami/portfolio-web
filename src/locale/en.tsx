@@ -97,6 +97,8 @@ export const en = {
 	},
 	Services: {
 		Title: "Services",
+		Type: "Web Development",
+		Description: "Development of professional websites, blogs, SaaS, landing pages, ecommerce, systems, among others.",
 	},
 	Skills: {
 		Title: "Skills",
