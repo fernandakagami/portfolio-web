@@ -1,5 +1,5 @@
 export enum ESkills {
-	HTML = "HMTL",
+	HTML5 = "HTML5",
 	CSS = "CSS",
 	JAVASCRIPT = "JAVASCRIPT",
 	TYPESCRIPT = "TYPESCRIPT",

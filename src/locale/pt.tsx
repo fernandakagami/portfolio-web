@@ -102,7 +102,7 @@ export const pt = {
 	},
 	Skills: {
 		Title: "Habilidades",
-		HTML: "Linguagem de marcação utilizada para estruturar o conteúdo da web.",
+		HTML5: "Linguagem de marcação utilizada para estruturar o conteúdo da web.",
 		CSS: "Linguagem de estilo utilizada para descrever a apresentação do conteúdo da web.",
 		SASS: "Pré-processador CSS que permite o uso de variáveis, aninhamento e mixins.",
 		JAVASCRIPT: "Linguagem de programação utilizada para criar interatividade e dinamismo na web.",

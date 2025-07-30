@@ -9,8 +9,8 @@ export const skillsParsed: Record<
 		color: string;
 	}
 > = {
-	[ESkills.HTML]: {
-		value: ESkills.HTML,
+	[ESkills.HTML5]: {
+		value: ESkills.HTML5,
 		label: "HTML",
 		icon: "devicon-plain:html5",
 		color: "hover:text-orange-500",

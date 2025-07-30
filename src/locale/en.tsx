@@ -101,7 +101,7 @@ export const en = {
 	},
 	Skills: {
 		Title: "Skills",
-		HTML: "Markup language used to structure web content.",
+		HTML5: "Markup language used to structure web content.",
 		CSS: "Style sheet language used to describe the presentation of web content.",
 		SASS: "CSS preprocessor that allows the use of variables, nesting, and mixins.",
 		JAVASCRIPT: "Programming language used to create interactivity and dynamism on the web.",
