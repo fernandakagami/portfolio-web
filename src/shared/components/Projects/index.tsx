@@ -31,7 +31,7 @@ export function Projects() {
 	}, [api]);
 
 	return (
-		<section className="flex w-full flex-col items-start justify-center gap-10 px-10 pb-10 lg:pb-16">
+		<section id="projects" className="flex w-full flex-col items-start justify-center gap-10 px-10 pb-10 lg:pb-16">
 			<h2 className="text-4xl">
 				{handleTranslatedText("Projects", "Title")}{" "}
 				<span className="inline-block bg-gradient-to-r from-pink-500 via-indigo-400 to-orange-500 bg-clip-text text-3xl font-bold text-transparent">

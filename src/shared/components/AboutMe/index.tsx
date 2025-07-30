@@ -10,7 +10,10 @@ export function AboutMe() {
 	const { handleTranslatedText } = useLanguage();
 
 	return (
-		<section className="mx-auto flex h-full w-full flex-col items-center justify-evenly px-10 pt-16 lg:h-screen lg:max-w-5xl lg:flex-row lg:px-0 lg:pt-0">
+		<section
+			id="about"
+			className="mx-auto flex h-full w-full flex-col items-center justify-evenly px-10 pt-16 lg:h-screen lg:max-w-5xl lg:flex-row lg:px-0 lg:pt-0"
+		>
 			<section className="me-0 flex w-full flex-col items-start justify-center gap-1 lg:me-10">
 				<h1 className="mb-4 text-5xl font-bold uppercase lg:text-6xl">Fernanda Lima</h1>
 

@@ -20,7 +20,6 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
 	const [language, setLanguage] = useState<ELanguages>(ELanguages.PT);
 
 	const toggleLanguage = (newLanguage: ELanguages) => {
-		console.log("Language changed to:", newLanguage);
 		localStorage.setItem("locale", newLanguage);
 		setLanguage(newLanguage);
 	};

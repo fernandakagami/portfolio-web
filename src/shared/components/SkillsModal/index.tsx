@@ -8,7 +8,6 @@ type SkillsModalProps = {
 		color: string;
 		icon: string;
 		label: string;
-		description: string;
 	};
 	description: string;
 };

@@ -6,8 +6,7 @@ export const pt = {
 		Experiences: "Experiências",
 		Projects: "Projetos",
 		Services: "Serviços",
-		Skills: "Conhecimentos",
-		Contact: "Contato",
+		Skills: "Habilidades",
 		Rights: "Todos os direitos reservados.",
 	},
 	AboutMe: {
@@ -109,7 +108,7 @@ export const pt = {
 		JAVASCRIPT: "Linguagem de programação utilizada para criar interatividade e dinamismo na web.",
 		REACT: "Biblioteca JavaScript para construir interfaces de usuário de forma declarativa.",
 		NEXT: "Framework React para construção de aplicações web com frontend otimizado, componentes serve side, renderização client e server side, entre outros.",
-		NATIVE: "Framework React para desenvolvimento de aplicativos móveis.",
+		REACTNATIVE: "Framework React para desenvolvimento de aplicativos móveis.",
 		TAILWIND: "Framework CSS utilitário para estilização rápida e responsiva de interfaces.",
 		TYPESCRIPT: "Superset do JavaScript que adiciona tipagem estática e recursos avançados de linguagem.",
 		VUE: "Framework JavaScript para construção de interfaces web para o usuário.",

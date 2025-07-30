@@ -26,22 +26,19 @@ export default function Menu() {
 
 			<ul className="sr-only mt-10 mb-40 flex flex-col justify-center gap-4 lg:not-sr-only">
 				<li className="cursor-pointer">
-					<Link href="/">{handleTranslatedText("Menu", "About")}</Link>
+					<Link href="#about">{handleTranslatedText("Menu", "About")}</Link>
 				</li>
 				<li className="cursor-pointer">
-					<Link href="/about">{handleTranslatedText("Menu", "Experiences")}</Link>
+					<Link href="#experiences">{handleTranslatedText("Menu", "Experiences")}</Link>
 				</li>
 				<li className="cursor-pointer">
-					<Link href="/rooms">{handleTranslatedText("Menu", "Projects")}</Link>
+					<Link href="#projects">{handleTranslatedText("Menu", "Projects")}</Link>
 				</li>
 				<li className="cursor-pointer">
-					<Link href="/rooms">{handleTranslatedText("Menu", "Services")}</Link>
+					<Link href="#services">{handleTranslatedText("Menu", "Services")}</Link>
 				</li>
 				<li className="cursor-pointer">
-					<Link href="/rooms">{handleTranslatedText("Menu", "Skills")}</Link>
-				</li>
-				<li className="cursor-pointer">
-					<Link href="/rooms">{handleTranslatedText("Menu", "Contact")}</Link>
+					<Link href="#skills">{handleTranslatedText("Menu", "Skills")}</Link>
 				</li>
 			</ul>
 
