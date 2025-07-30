@@ -13,7 +13,31 @@ export const en = {
 		Description:
 			"I am a passionate front-end developer dedicated to creating amazing user experiences. I primarily work with Vue, React, Next, TypeScript, and Tailwind.",
 	},
+	Experiences: {
+		Title: "Experiences",
+		Items: [
+			{
+				Company: "Company A",
+				Role: "Front-end Developer",
+				Duration: "Jan 2020 - Present",
+				Description: "Working on various projects using React and Next.js.",
+			},
+			{
+				Company: "Company B",
+				Role: "Web Developer",
+				Duration: "Jan 2018 - Dec 2019",
+				Description: "Developed responsive websites using HTML, CSS, and JavaScript.",
+			},
+		],
+	},
+	Projects: {
+		Title: "Projects",
+	},
+	Services: {
+		Title: "Services",
+	},
 	Skills: {
+		Title: "Skills",
 		HTML: "Markup language used to structure web content.",
 		CSS: "Style sheet language used to describe the presentation of web content.",
 		SASS: "CSS preprocessor that allows the use of variables, nesting, and mixins.",

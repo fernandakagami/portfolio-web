@@ -6,12 +6,15 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Card, CardContent } from "@/components/ui/card";
 import { allExperiences } from "@/shared/data/experiences-parser";
 import { EExperiences } from "@/shared/enums/experiences";
+import { useLanguage } from "@/shared/contexts/language.context";
 
 export default function Experiences() {
+	const { handleTranslatedText } = useLanguage();
+
 	return (
 		<section className="flex w-full flex-col items-start justify-center gap-10 px-10 pb-10 md:px-0 md:pb-16">
 			<h2 className="text-4xl">
-				Experiências{" "}
+				{handleTranslatedText("Experiences", "Title")}{" "}
 				<span className="inline-block bg-gradient-to-r from-pink-500 via-indigo-400 to-orange-500 bg-clip-text text-3xl font-bold text-transparent">
 					.
 				</span>

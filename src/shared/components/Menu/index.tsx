@@ -59,39 +59,40 @@ export default function Menu() {
 						</a>
 						<p>Linkedin</p>
 					</li>
+					<li className="mt-6 flex flex-row items-center gap-2">
+						<div className="flex flex-row items-center gap-3">
+							<Tooltip>
+								<TooltipTrigger>
+									<Icon
+										icon="twemoji:flag-brazil"
+										width="40"
+										height="40"
+										className="cursor-pointer"
+										onClick={() => toggleLanguage(ELanguages.PT)}
+									/>
+								</TooltipTrigger>
+								<TooltipContent>
+									<p>{languagesParsed[ELanguages.PT].label}</p>
+								</TooltipContent>
+							</Tooltip>
+
+							<Tooltip>
+								<TooltipTrigger>
+									<Icon
+										icon="twemoji:flag-united-states"
+										width="40"
+										height="40"
+										className="cursor-pointer"
+										onClick={() => toggleLanguage(ELanguages.EN)}
+									/>
+								</TooltipTrigger>
+								<TooltipContent>
+									<p>{languagesParsed[ELanguages.EN].label}</p>
+								</TooltipContent>
+							</Tooltip>
+						</div>
+					</li>
 				</ul>
-
-				<div className="mb-3 flex flex-row items-center gap-3">
-					<Tooltip>
-						<TooltipTrigger>
-							<Icon
-								icon="twemoji:flag-brazil"
-								width="40"
-								height="40"
-								className="cursor-pointer"
-								onClick={() => toggleLanguage(ELanguages.PT)}
-							/>
-						</TooltipTrigger>
-						<TooltipContent>
-							<p>{languagesParsed[ELanguages.PT].label}</p>
-						</TooltipContent>
-					</Tooltip>
-
-					<Tooltip>
-						<TooltipTrigger>
-							<Icon
-								icon="twemoji:flag-united-states"
-								width="40"
-								height="40"
-								className="cursor-pointer"
-								onClick={() => toggleLanguage(ELanguages.EN)}
-							/>
-						</TooltipTrigger>
-						<TooltipContent>
-							<p>{languagesParsed[ELanguages.EN].label}</p>
-						</TooltipContent>
-					</Tooltip>
-				</div>
 
 				<p className="text-xs">©{`${new Date().getFullYear()}`} Fernanda Lima.</p>
 				<p className="text-xs">{handleTranslatedText("Menu", "Rights")}</p>

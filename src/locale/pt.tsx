@@ -13,7 +13,31 @@ export const pt = {
 		Description:
 			"Sou uma desenvolvedora front-end apaixonada por criar experiências de usuário incríveis. Trabalhando principalmente com Vue, React, Next, TypeScript e Tailwind.",
 	},
+	Experiences: {
+		Title: "Experiências",
+		Items: [
+			{
+				Company: "Company A",
+				Role: "Front-end Developer",
+				Duration: "Jan 2020 - Present",
+				Description: "Working on various projects using React and Next.js.",
+			},
+			{
+				Company: "Company B",
+				Role: "Web Developer",
+				Duration: "Jan 2018 - Dec 2019",
+				Description: "Developed responsive websites using HTML, CSS, and JavaScript.",
+			},
+		],
+	},
+	Projects: {
+		Title: "Projetos",
+	},
+	Services: {
+		Title: "Serviços",
+	},
 	Skills: {
+		Title: "Habilidades",
 		HTML: "Linguagem de marcação utilizada para estruturar o conteúdo da web.",
 		CSS: "Linguagem de estilo utilizada para descrever a apresentação do conteúdo da web.",
 		SASS: "Pré-processador CSS que permite o uso de variáveis, aninhamento e mixins.",

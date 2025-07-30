@@ -11,11 +11,13 @@ import {
 	CarouselPrevious,
 	type CarouselApi,
 } from "@/components/ui/carousel";
+import { useLanguage } from "@/shared/contexts/language.context";
 
 export function Projects() {
 	const [api, setApi] = useState<CarouselApi>();
 	const [current, setCurrent] = useState(0);
 	const [count, setCount] = useState(0);
+	const { handleTranslatedText } = useLanguage();
 
 	useEffect(() => {
 		if (!api) {
@@ -31,7 +33,7 @@ export function Projects() {
 	return (
 		<section className="flex w-full flex-col items-start justify-center gap-10 px-10 pb-10 sm:pb-16">
 			<h2 className="text-4xl">
-				Projetos{" "}
+				{handleTranslatedText("Projects", "Title")}{" "}
 				<span className="inline-block bg-gradient-to-r from-pink-500 via-indigo-400 to-orange-500 bg-clip-text text-3xl font-bold text-transparent">
 					.
 				</span>
