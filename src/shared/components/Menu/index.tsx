@@ -17,14 +17,14 @@ export default function Menu() {
 	const { handleTranslatedText, toggleLanguage } = useLanguage();
 
 	return (
-		<div className="sticky left-0 flex h-24 w-screen flex-row items-center justify-between bg-black py-0 ps-10 pe-10 text-white sm:top-0 sm:h-screen sm:w-72 sm:flex-col sm:items-start sm:py-24 sm:ps-12 sm:pe-0">
+		<div className="sticky left-0 flex h-24 w-screen flex-row items-center justify-between bg-black py-0 ps-10 pe-10 text-white lg:top-0 lg:h-screen lg:w-72 lg:flex-col lg:items-start lg:py-24 lg:ps-12 lg:pe-12 xl:pe-0">
 			<div className={pacifico.className}>
 				<h1 className="text-5xl">Fer.</h1>
 			</div>
 
 			<DropdownMobile />
 
-			<ul className="sr-only mt-10 mb-40 flex flex-col justify-center gap-4 md:not-sr-only">
+			<ul className="sr-only mt-10 mb-40 flex flex-col justify-center gap-4 lg:not-sr-only">
 				<li className="cursor-pointer">
 					<Link href="/">{handleTranslatedText("Menu", "About")}</Link>
 				</li>
@@ -45,7 +45,7 @@ export default function Menu() {
 				</li>
 			</ul>
 
-			<div className="sr-only md:not-sr-only">
+			<div className="sr-only lg:not-sr-only">
 				<ul className="mb-10">
 					<li className="mb-2 flex flex-row items-center gap-2">
 						<a href="https://github.com/fernandakagami" target="_blank">

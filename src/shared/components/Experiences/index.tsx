@@ -12,7 +12,7 @@ export default function Experiences() {
 	const { handleTranslatedText } = useLanguage();
 
 	return (
-		<section className="flex w-full flex-col items-start justify-center gap-10 px-10 pb-10 md:px-0 md:pb-16">
+		<section className="flex w-full flex-col items-start justify-center gap-10 px-10 pb-10 lg:px-0 lg:pb-16">
 			<h2 className="text-4xl">
 				{handleTranslatedText("Experiences", "Title")}{" "}
 				<span className="inline-block bg-gradient-to-r from-pink-500 via-indigo-400 to-orange-500 bg-clip-text text-3xl font-bold text-transparent">
@@ -29,7 +29,7 @@ export default function Experiences() {
 							return (
 								<AccordionItem value={experience.value} key={experience.value}>
 									<AccordionTrigger className="cursor-pointer">
-										<div className="item-start flex w-full flex-col justify-between gap-2 md:flex-row md:items-center md:gap-0">
+										<div className="item-start flex w-full flex-col justify-between gap-2 lg:flex-row lg:items-center lg:gap-0">
 											<span className="text-xl font-bold">
 												{handleTranslatedText("Experiences", experience.value, "Label")}
 											</span>
