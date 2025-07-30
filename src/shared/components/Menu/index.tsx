@@ -17,7 +17,7 @@ export default function Menu() {
 	const { handleTranslatedText, toggleLanguage } = useLanguage();
 
 	return (
-		<div className="sticky left-0 flex h-24 w-screen flex-row items-center justify-between bg-black py-0 ps-10 pe-10 text-white lg:top-0 lg:h-screen lg:w-72 lg:flex-col lg:items-start lg:py-24 lg:ps-12 lg:pe-12 xl:pe-0">
+		<div className="sticky top-0 left-0 z-50 flex h-24 w-screen flex-row items-center justify-between bg-black py-0 ps-10 pe-10 text-white lg:top-0 lg:h-screen lg:w-72 lg:flex-col lg:items-start lg:py-24 lg:ps-12 lg:pe-12 xl:pe-0">
 			<div className={pacifico.className}>
 				<h1 className="text-5xl">Fer.</h1>
 			</div>

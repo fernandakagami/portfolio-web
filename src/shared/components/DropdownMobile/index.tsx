@@ -27,24 +27,34 @@ export default function DropdownMobile() {
 			<DropdownMenuContent align="start">
 				<DropdownMenuGroup>
 					<DropdownMenuItem>
-						<CircleUser />
-						<p className="">{handleTranslatedText("Menu", "About")}</p>
+						<a href="#about" className="flex items-center gap-2">
+							<CircleUser />
+							<p className="">{handleTranslatedText("Menu", "About")}</p>
+						</a>
 					</DropdownMenuItem>
 					<DropdownMenuItem>
-						<ClipboardList />
-						<p>{handleTranslatedText("Menu", "Experiences")}</p>
+						<a href="#experiences" className="flex items-center gap-2">
+							<ClipboardList />
+							<p>{handleTranslatedText("Menu", "Experiences")}</p>
+						</a>
 					</DropdownMenuItem>
 					<DropdownMenuItem>
-						<Presentation />
-						<p>{handleTranslatedText("Menu", "Projects")}</p>
+						<a href="#projects" className="flex items-center gap-2">
+							<Presentation />
+							<p>{handleTranslatedText("Menu", "Projects")}</p>
+						</a>
 					</DropdownMenuItem>
 					<DropdownMenuItem>
-						<HandPlatter />
-						<p>{handleTranslatedText("Menu", "Services")}</p>
+						<a href="#services" className="flex items-center gap-2">
+							<HandPlatter />
+							<p>{handleTranslatedText("Menu", "Services")}</p>
+						</a>
 					</DropdownMenuItem>
 					<DropdownMenuItem>
-						<BookOpenText />
-						<p>{handleTranslatedText("Menu", "Skills")}</p>
+						<a href="#skills" className="flex items-center gap-2">
+							<BookOpenText />
+							<p>{handleTranslatedText("Menu", "Skills")}</p>
+						</a>
 					</DropdownMenuItem>
 				</DropdownMenuGroup>
 
