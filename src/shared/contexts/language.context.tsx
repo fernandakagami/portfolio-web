@@ -11,7 +11,7 @@ type TLanguageContextProps = {
 	language: ELanguages;
 	toggleLanguage: (newLanguage: ELanguages) => void;
 	getLocale: () => string | undefined;
-	handleTranslatedText: (key: string, value: string) => string;
+	handleTranslatedText: (key: string, value: string, title?: string) => string | string[];
 };
 
 const LanguageContext = createContext<TLanguageContextProps | null>(null);
@@ -31,14 +31,14 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
 		}
 	}
 
-	function handleTranslatedText(key: string, value: string): string {
+	function handleTranslatedText(key: string, value: string, title?: string): string | string[] {
 		const translations: any = language === ELanguages.EN ? en : pt;
 
-		const result: any = translations[key][value];
+		if (key === "Experiences" && title) {
+			return translations[key][value][title];
+		}
 
-		console.log(result);
-
-		return result as string;
+		return translations[key][value];
 	}
 
 	useEffect(() => {

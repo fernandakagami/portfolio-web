@@ -23,27 +23,35 @@ export default function Experiences() {
 			<Card className="w-full">
 				<CardContent className="w-full">
 					<Accordion type="single" collapsible className="w-full" defaultValue={EExperiences.PLAN}>
-						{allExperiences.map((experience) => (
-							<AccordionItem value={experience.value} key={experience.value}>
-								<AccordionTrigger>
-									<div className="item-start flex w-full cursor-pointer flex-col justify-between gap-2 md:flex-row md:items-center md:gap-0">
-										<span className="text-xl font-bold">{experience.label}</span>
-										<span>{experience.period}</span>
-									</div>
-								</AccordionTrigger>
-								<AccordionContent className="flex flex-col gap-4">
-									<p className="text-base font-semibold">{experience.company}</p>
-									<ul>
-										{experience.description.map((item, index) => (
-											<li key={index} className="flex flex-row items-center gap-2">
-												<Dot />
-												<span>{item}</span>
-											</li>
-										))}
-									</ul>
-								</AccordionContent>
-							</AccordionItem>
-						))}
+						{allExperiences.map((experience) => {
+							const description = handleTranslatedText("Experiences", experience.value, "Description") as string[];
+
+							return (
+								<AccordionItem value={experience.value} key={experience.value}>
+									<AccordionTrigger className="cursor-pointer">
+										<div className="item-start flex w-full flex-col justify-between gap-2 md:flex-row md:items-center md:gap-0">
+											<span className="text-xl font-bold">
+												{handleTranslatedText("Experiences", experience.value, "Label")}
+											</span>
+											<span>{handleTranslatedText("Experiences", experience.value, "Period")}</span>
+										</div>
+									</AccordionTrigger>
+									<AccordionContent className="flex flex-col gap-4">
+										<p className="text-base font-semibold">
+											{handleTranslatedText("Experiences", experience.value, "Company")}
+										</p>
+										<ul>
+											{description.map((item, index) => (
+												<li key={index} className="flex flex-row items-center gap-2">
+													<Dot />
+													<span>{item}</span>
+												</li>
+											))}
+										</ul>
+									</AccordionContent>
+								</AccordionItem>
+							);
+						})}
 					</Accordion>
 				</CardContent>
 			</Card>

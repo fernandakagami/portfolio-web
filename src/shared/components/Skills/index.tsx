@@ -19,7 +19,7 @@ export function Skills() {
 
 			<div className="mx-auto grid grid-cols-2 gap-4 md:grid-cols-4">
 				{allSkills.map((skill, index) => (
-					<SkillsModal skill={skill} description={handleTranslatedText("Skills", skill.label)} key={index} />
+					<SkillsModal skill={skill} description={handleTranslatedText("Skills", skill.label) as string} key={index} />
 				))}
 			</div>
 		</section>

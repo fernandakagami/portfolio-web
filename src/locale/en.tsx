@@ -1,3 +1,5 @@
+import { EExperiences } from "@/shared/enums/experiences";
+
 export const en = {
 	Menu: {
 		About: "About Me",
@@ -15,20 +17,80 @@ export const en = {
 	},
 	Experiences: {
 		Title: "Experiences",
-		Items: [
-			{
-				Company: "Company A",
-				Role: "Front-end Developer",
-				Duration: "Jan 2020 - Present",
-				Description: "Working on various projects using React and Next.js.",
-			},
-			{
-				Company: "Company B",
-				Role: "Web Developer",
-				Duration: "Jan 2018 - Dec 2019",
-				Description: "Developed responsive websites using HTML, CSS, and JavaScript.",
-			},
-		],
+		[EExperiences.PLAN]: {
+			Company: "Grupo Plan Marketing",
+			Label: "Front-end Developer",
+			Period: "june de 2025 - present",
+			Description: [
+				"Experience with React.js and Next.js",
+				"Experience with Vue 2",
+				"Experience with React Native",
+				"Solid understanding of JavaScript and TypeScript",
+				"Experience with state management using Context API and Vuex",
+				"Knowledge of componentization and coding best practices",
+				"Familiarity with styling tools such as CSS and Tailwind",
+				"Experience with consuming and integrating REST APIs",
+				"Familiarity with Git, GitHub, and versioning workflows (branches, PRs, code review)",
+			],
+		},
+		[EExperiences.BNP]: {
+			Value: EExperiences.BNP,
+			Company: "BNP - Soluções em TI",
+			Label: "Front-end Developer",
+			Period: "february 2024 - june 2025",
+			Description: [
+				"Experience with React.js and Next.js",
+				"Solid understanding of JavaScript and TypeScript",
+				"Experience with state management using Context API",
+				"Knowledge of componentization and coding best practices",
+				"Familiarity with styling tools such as SASS, Tailwind, and ANTD",
+				"Experience with consuming and integrating REST APIs",
+				"Familiarity with Git, Azure DevOps, and versioning workflows (branches, PRs, code review)",
+			],
+		},
+		[EExperiences.PLUS]: {
+			Value: EExperiences.PLUS,
+			Company: "3C Plus",
+			Label: "Front-end Developer",
+			Period: "june 2023 - february 2024",
+			Description: [
+				"Experiência com Vue 3",
+				"Noções sólidas de JavaScript",
+				"Experience with state management using Vuex",
+				"Knowledge of coding best practices",
+				"Familiarity with styling tools such as CSS and Bootstrap",
+				"Experience with consuming and integrating REST APIs",
+				"Familiarity with Git and versioning workflows (branches, PRs, code review)",
+				"Knowledge of WebSocket for real-time data updates",
+				"Experience with Scrum and Kanban methodologies",
+				"Collaboration with UX and UI professionals",
+			],
+		},
+		[EExperiences.PLURAL]: {
+			Value: EExperiences.PLURAL,
+			Company: "Instituição Sociedade Plural",
+			Label: "Front-end Developer",
+			Period: "november 2022 - june 2023",
+			Description: [
+				"Experience with React.js",
+				"Solid understanding of JavaScript",
+				"Familiarity with Git and versioning workflows (branches, PRs, code review)",
+				"Collaboration with UX and UI professionals",
+			],
+		},
+		[EExperiences.LIBRING]: {
+			Value: EExperiences.LIBRING,
+			Company: "Libring",
+			Label: "Intern Web Developer",
+			Period: "august 2018 - november 2018",
+			Description: [
+				"Experience with Ruby on Rails in a monolithic application",
+				"Solid understanding of JavaScript",
+				"Experience with MVC architecture",
+				"Knowledge of styling tools such as CSS and Bootstrap",
+				"Familiarity with Git and versioning workflows (branches, PRs, code review)",
+			],
+		},
 	},
 	Projects: {
 		Title: "Projects",
