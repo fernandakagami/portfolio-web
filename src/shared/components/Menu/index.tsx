@@ -16,8 +16,6 @@ const pacifico = Pacifico({ weight: ["400"], subsets: ["latin"] });
 export default function Menu() {
 	const { handleTranslatedText, toggleLanguage, language } = useLanguage();
 
-	console.log(language);
-
 	return (
 		<div className="sticky top-0 left-0 z-50 flex h-24 w-screen flex-row items-center justify-between bg-black py-0 ps-10 pe-10 text-white xl:top-0 xl:h-screen xl:w-72 xl:flex-col xl:items-start xl:py-24 xl:ps-12 xl:pe-12 2xl:pe-0">
 			<div className={pacifico.className}>
