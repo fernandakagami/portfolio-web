@@ -1,4 +1,4 @@
-import { BookOpenText, CircleUser, ClipboardList, HandPlatter, Menu, Presentation } from "lucide-react";
+import { BookOpenText, Check, CircleUser, ClipboardList, HandPlatter, Menu, Presentation } from "lucide-react";
 import { Icon } from "@iconify/react/dist/iconify.js";
 
 import { Button } from "@/components/ui/button";
@@ -15,7 +15,7 @@ import { languagesParsed } from "@/shared/data/languages-parser";
 import { ELanguages } from "@/shared/enums/languages";
 
 export default function DropdownMobile() {
-	const { handleTranslatedText, toggleLanguage } = useLanguage();
+	const { handleTranslatedText, toggleLanguage, language } = useLanguage();
 
 	return (
 		<DropdownMenu>
@@ -69,6 +69,7 @@ export default function DropdownMobile() {
 						onClick={() => toggleLanguage(ELanguages.PT)}
 					/>
 					<p>{languagesParsed[ELanguages.PT]?.label}</p>
+					{language === ELanguages.PT && <Check />}
 				</DropdownMenuItem>
 
 				<DropdownMenuItem onClick={() => toggleLanguage(ELanguages.EN)}>
@@ -80,6 +81,7 @@ export default function DropdownMobile() {
 						onClick={() => toggleLanguage(ELanguages.EN)}
 					/>
 					<p>{languagesParsed[ELanguages.EN]?.label}</p>
+					{language === ELanguages.EN && <Check />}
 				</DropdownMenuItem>
 			</DropdownMenuContent>
 		</DropdownMenu>
