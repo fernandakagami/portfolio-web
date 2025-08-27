@@ -8,7 +8,7 @@ interface MyImageProps {
 
 export function MyImage({ className }: MyImageProps) {
 	return (
-		<section className={`flex items-center justify-center lg:!w-4xl ${className}`}>
+		<section className={`flex items-center justify-center xl:!w-4xl ${className}`}>
 			<Image
 				src={me.src}
 				width={800}

@@ -33,7 +33,7 @@ export function Projects() {
 	return (
 		<section
 			id="projects"
-			className="flex w-full flex-col items-start justify-center gap-10 px-10 pb-10 lg:px-0 lg:pb-16"
+			className="flex w-full flex-col items-start justify-center gap-10 px-10 pb-10 xl:px-0 xl:pb-16"
 		>
 			<h2 className="text-4xl">
 				{handleTranslatedText("Projects", "Title")}{" "}
@@ -42,7 +42,7 @@ export function Projects() {
 				</span>
 			</h2>
 
-			<div className="mx-auto max-w-[150px] lg:max-w-xs">
+			<div className="mx-auto max-w-[150px] xl:max-w-xs">
 				<Carousel setApi={setApi} className="w-full max-w-xs">
 					<CarouselContent>
 						{Array.from({ length: 5 }).map((_, index) => (

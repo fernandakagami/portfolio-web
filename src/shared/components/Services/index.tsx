@@ -11,7 +11,7 @@ export function Services() {
 	return (
 		<section
 			id="services"
-			className="flex w-full flex-col items-start justify-center gap-10 px-10 pb-10 lg:px-0 lg:pb-16"
+			className="flex w-full flex-col items-start justify-center gap-10 px-10 pb-10 xl:px-0 xl:pb-16"
 		>
 			<h2 className="text-4xl">
 				{handleTranslatedText("Services", "Title")}{" "}

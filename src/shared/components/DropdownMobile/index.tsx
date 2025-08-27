@@ -19,7 +19,7 @@ export default function DropdownMobile() {
 
 	return (
 		<DropdownMenu>
-			<DropdownMenuTrigger asChild className="not-sr-only lg:sr-only">
+			<DropdownMenuTrigger asChild className="not-sr-only xl:sr-only">
 				<Button variant="outline" className="text-black">
 					<Menu />
 				</Button>

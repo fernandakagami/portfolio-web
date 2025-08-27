@@ -11,7 +11,7 @@ export function Skills() {
 	return (
 		<section
 			id="skills"
-			className="flex w-full flex-col items-start justify-center gap-10 px-10 pb-10 lg:px-0 lg:pb-16"
+			className="flex w-full flex-col items-start justify-center gap-10 px-10 pb-10 xl:px-0 xl:pb-16"
 		>
 			<h2 className="text-4xl">
 				{handleTranslatedText("Skills", "Title")}{" "}
@@ -20,7 +20,7 @@ export function Skills() {
 				</span>
 			</h2>
 
-			<div className="mx-auto grid grid-cols-2 gap-4 lg:grid-cols-4">
+			<div className="mx-auto grid grid-cols-2 gap-4 xl:grid-cols-4">
 				{allSkills.map((skill, index) => (
 					<SkillsModal skill={skill} description={handleTranslatedText("Skills", skill.value) as string} key={index} />
 				))}
