@@ -14,7 +14,9 @@ import DropdownMobile from "../DropdownMobile";
 const pacifico = Pacifico({ weight: ["400"], subsets: ["latin"] });
 
 export default function Menu() {
-	const { handleTranslatedText, toggleLanguage } = useLanguage();
+	const { handleTranslatedText, toggleLanguage, language } = useLanguage();
+
+	console.log(language);
 
 	return (
 		<div className="sticky top-0 left-0 z-50 flex h-24 w-screen flex-row items-center justify-between bg-black py-0 ps-10 pe-10 text-white xl:top-0 xl:h-screen xl:w-72 xl:flex-col xl:items-start xl:py-24 xl:ps-12 xl:pe-12 2xl:pe-0">
@@ -59,14 +61,10 @@ export default function Menu() {
 					<li className="mt-6 flex flex-row items-center gap-2">
 						<div className="flex flex-row items-center gap-3">
 							<Tooltip>
-								<TooltipTrigger>
-									<Icon
-										icon="twemoji:flag-brazil"
-										width="40"
-										height="40"
-										className="cursor-pointer"
-										onClick={() => toggleLanguage(ELanguages.PT)}
-									/>
+								<TooltipTrigger
+									className={`cursor-pointer ${language === ELanguages.PT ? "rounded-lg border-2 border-indigo-500/200 px-2" : ""}`}
+								>
+									<Icon icon="twemoji:flag-brazil" width="40" onClick={() => toggleLanguage(ELanguages.PT)} />
 								</TooltipTrigger>
 								<TooltipContent>
 									<p>{languagesParsed[ELanguages.PT].label}</p>
@@ -74,12 +72,13 @@ export default function Menu() {
 							</Tooltip>
 
 							<Tooltip>
-								<TooltipTrigger>
+								<TooltipTrigger
+									className={`cursor-pointer ${language === ELanguages.EN ? "rounded-lg border-2 border-indigo-500/200 px-2" : ""}`}
+								>
 									<Icon
 										icon="twemoji:flag-united-states"
 										width="40"
 										height="40"
-										className="cursor-pointer"
 										onClick={() => toggleLanguage(ELanguages.EN)}
 									/>
 								</TooltipTrigger>
