@@ -1,4 +1,4 @@
-import { BookOpenText, Check, CircleUser, ClipboardList, HandPlatter, Menu, Presentation } from "lucide-react";
+import { BookOpenText, Check, CircleUser, ClipboardList, HandPlatter, Mail, Menu, Presentation } from "lucide-react";
 import { Icon } from "@iconify/react/dist/iconify.js";
 
 import { Button } from "@/components/ui/button";
@@ -54,6 +54,12 @@ export default function DropdownMobile() {
 						<a href="#skills" className="flex items-center gap-2">
 							<BookOpenText />
 							<p>{handleTranslatedText("Menu", "Skills")}</p>
+						</a>
+					</DropdownMenuItem>
+					<DropdownMenuItem>
+						<a href="#contact" className="flex items-center gap-2">
+							<Mail />
+							<p>{handleTranslatedText("Menu", "Contact")}</p>
 						</a>
 					</DropdownMenuItem>
 				</DropdownMenuGroup>

@@ -40,6 +40,12 @@ export default function Menu() {
 				<li className="cursor-pointer">
 					<Link href="#skills">{handleTranslatedText("Menu", "Skills")}</Link>
 				</li>
+				<li className="cursor-pointer">
+					<Link href="#skills">{handleTranslatedText("Menu", "Skills")}</Link>
+				</li>
+				<li className="cursor-pointer">
+					<Link href="#contact">{handleTranslatedText("Menu", "Contact")}</Link>
+				</li>
 			</ul>
 
 			<div className="sr-only xl:not-sr-only">

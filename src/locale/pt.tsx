@@ -7,6 +7,7 @@ export const pt = {
 		Projects: "Projetos",
 		Services: "Serviços",
 		Skills: "Habilidades",
+		Contact: "Entre em Contato",
 		Rights: "Todos os direitos reservados.",
 	},
 	AboutMe: {
@@ -112,5 +113,17 @@ export const pt = {
 		TAILWIND: "Framework CSS utilitário para estilização rápida e responsiva de interfaces.",
 		TYPESCRIPT: "Superset do JavaScript que adiciona tipagem estática e recursos avançados de linguagem.",
 		VUE: "Framework JavaScript para construção de interfaces web para o usuário.",
+	},
+	Contact: {
+		Title: "Contato",
+		Reach: "Entre em contato comigo",
+		Text1: "Tem uma ideia?",
+		Text2: "Quer desenvolvê-la?",
+		Text3: "Entre em contato comigo!",
+		Caption: "Preencha o formulário e vamos começar seu projeto",
+		Name: "Nome",
+		Email: "Email",
+		Message: "Mensagem (Opcional)",
+		Button: "Enviar Mensagem",
 	},
 };

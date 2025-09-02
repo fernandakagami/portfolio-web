@@ -7,6 +7,7 @@ export const en = {
 		Projects: "Projects",
 		Services: "Services",
 		Skills: "Skills",
+		Contact: "Contact",
 		Rights: "All rights reserved.",
 	},
 	AboutMe: {
@@ -111,5 +112,17 @@ export const en = {
 		TAILWIND: "Utility-first CSS framework for rapid and responsive interface styling.",
 		TYPESCRIPT: "Superset of JavaScript that adds static typing and advanced language features.",
 		VUE: "JavaScript framework for building web interfaces for the user.",
+	},
+	Contact: {
+		Title: "Contact",
+		Reach: "Reach out to me",
+		Text1: "Got an idea?",
+		Text2: "Want to develop it? ",
+		Text3: "Contact me!",
+		Caption: "Fill out the form and let's get started on your project",
+		Name: "Name",
+		Email: "Email",
+		Message: "Message (Optional)",
+		Button: "Send Message",
 	},
 };
