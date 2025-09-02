@@ -122,7 +122,7 @@ export const en = {
 		Caption: "Fill out the form and let's get started on your project",
 		Name: "Name",
 		Email: "Email",
-		Message: "Message (Optional)",
+		Message: "Message",
 		Button: "Send Message",
 	},
 };

@@ -123,7 +123,7 @@ export const pt = {
 		Caption: "Preencha o formulário e vamos começar seu projeto",
 		Name: "Nome",
 		Email: "Email",
-		Message: "Mensagem (Opcional)",
+		Message: "Mensagem",
 		Button: "Enviar Mensagem",
 	},
 };

@@ -43,15 +43,18 @@ export default function Contact() {
 						<div className="flex flex-col gap-6">
 							<div className="grid gap-2">
 								<Label htmlFor="name">{handleTranslatedText("Contact", "Name")}</Label>
-								<Input type="text" id="name" name="name"></Input>
+								<Input type="text" id="name" name="name" required></Input>
 							</div>
 							<div className="grid gap-2">
 								<Label htmlFor="email">{handleTranslatedText("Contact", "Email")}</Label>
-								<Input type="email" id="email" name="email"></Input>
+								<Input type="email" id="email" name="email">
+									{" "}
+									required
+								</Input>
 							</div>
 							<div className="grid gap-2">
 								<Label htmlFor="description">{handleTranslatedText("Contact", "Message")}</Label>
-								<Textarea id="description" name="description" rows={5} cols={33} />
+								<Textarea id="description" name="description" rows={5} cols={33} required />
 							</div>
 						</div>
 
