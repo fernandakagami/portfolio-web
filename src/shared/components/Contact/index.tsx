@@ -47,10 +47,7 @@ export default function Contact() {
 							</div>
 							<div className="grid gap-2">
 								<Label htmlFor="email">{handleTranslatedText("Contact", "Email")}</Label>
-								<Input type="email" id="email" name="email">
-									{" "}
-									required
-								</Input>
+								<Input type="email" id="email" name="email" required></Input>
 							</div>
 							<div className="grid gap-2">
 								<Label htmlFor="description">{handleTranslatedText("Contact", "Message")}</Label>
