@@ -66,7 +66,7 @@ export default function Menu() {
 						<div className="flex flex-row items-center gap-3">
 							<Tooltip>
 								<TooltipTrigger
-									className={`cursor-pointer ${language === ELanguages.PT ? "rounded-lg border-2 border-indigo-500/200 px-2" : ""}`}
+									className={`cursor-pointer rounded-lg border-2 px-2 ${language === ELanguages.PT ? "border-indigo-500/200" : "border-black"}`}
 								>
 									<Icon icon="twemoji:flag-brazil" width="40" onClick={() => toggleLanguage(ELanguages.PT)} />
 								</TooltipTrigger>
@@ -77,7 +77,7 @@ export default function Menu() {
 
 							<Tooltip>
 								<TooltipTrigger
-									className={`cursor-pointer ${language === ELanguages.EN ? "rounded-lg border-2 border-indigo-500/200 px-2" : ""}`}
+									className={`cursor-pointer rounded-lg border-2 px-2 ${language === ELanguages.EN ? "border-indigo-500/200" : "border-black"}`}
 								>
 									<Icon
 										icon="twemoji:flag-united-states"

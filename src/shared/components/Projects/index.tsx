@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 import { Card, CardContent } from "@/components/ui/card";
 import {
@@ -12,6 +13,7 @@ import {
 	type CarouselApi,
 } from "@/components/ui/carousel";
 import { useLanguage } from "@/shared/contexts/language.context";
+import project01 from "@/assets/images/project01.webp";
 
 export function Projects() {
 	const [api, setApi] = useState<CarouselApi>();
@@ -42,25 +44,33 @@ export function Projects() {
 				</span>
 			</h2>
 
-			<div className="mx-auto max-w-[150px] xl:max-w-xs">
-				<Carousel setApi={setApi} className="w-full max-w-xs">
-					<CarouselContent>
-						{Array.from({ length: 5 }).map((_, index) => (
-							<CarouselItem key={index}>
-								<Card>
-									<CardContent className="flex aspect-square items-center justify-center p-6">
-										<span className="text-4xl font-semibold">{index + 1}</span>
+			<Carousel
+				opts={{
+					align: "start",
+				}}
+				className="m-auto h-full w-full max-w-[200px] xl:max-w-2xl"
+				setApi={setApi}
+			>
+				<CarouselContent className="-mt-1 h-[400px]">
+					{Array.from({ length: 3 }).map((_, index) => (
+						<CarouselItem key={index}>
+							<div className="h-full p-1">
+								<Card className="flex h-full cursor-pointer items-center justify-center px-6">
+									<CardContent className="flex h-full flex-col items-center justify-between p-0">
+										<Image src={project01.src} alt={`Project ${index + 1}`} width={630} height={630} />
+
+										<p>teste</p>
 									</CardContent>
 								</Card>
-							</CarouselItem>
-						))}
-					</CarouselContent>
-					<CarouselPrevious />
-					<CarouselNext />
-				</Carousel>
-				<div className="text-muted-foreground py-2 text-center text-sm">
-					Slide {current} of {count}
-				</div>
+							</div>
+						</CarouselItem>
+					))}
+				</CarouselContent>
+				<CarouselPrevious className="cursor-pointer" />
+				<CarouselNext className="cursor-pointer" />
+			</Carousel>
+			<div className="text-muted-foreground -mt-6 w-full text-center text-sm">
+				Slide {current} of {count}
 			</div>
 		</section>
 	);

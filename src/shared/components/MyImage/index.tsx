@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import me from "../../../../public/ghibli.jpg";
+import me from "@/assets/images/ghibli.webp";
 
 interface MyImageProps {
 	className?: string;
