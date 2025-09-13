@@ -1,4 +1,5 @@
 import { EExperiences } from "@/shared/enums/experiences";
+import { EProjects } from "@/shared/enums/projects";
 
 export const pt = {
 	Menu: {
@@ -94,6 +95,12 @@ export const pt = {
 	},
 	Projects: {
 		Title: "Projetos",
+		Subtitle: "Projeto",
+		Of: "de",
+		Technologies: "Tecnologias",
+		[EProjects.PROJECT_01]: {
+			Label: "Website Multiverso do Homem-Aranha",
+		},
 	},
 	Services: {
 		Title: "Serviços",
@@ -117,9 +124,6 @@ export const pt = {
 	Contact: {
 		Title: "Contato",
 		Reach: "Entre em contato comigo",
-		Text1: "Tem uma ideia?",
-		Text2: "Quer desenvolvê-la?",
-		Text3: "Entre em contato comigo!",
 		Caption: "Preencha o formulário e vamos começar seu projeto",
 		Name: "Nome",
 		Email: "Email",

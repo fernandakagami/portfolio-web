@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 import { Card, CardContent } from "@/components/ui/card";
 import {
@@ -14,12 +15,23 @@ import {
 } from "@/components/ui/carousel";
 import { useLanguage } from "@/shared/contexts/language.context";
 import project01 from "@/assets/images/project01.webp";
+import { allProjects } from "@/shared/data/projects-parser";
+import { EProjects } from "@/shared/enums/projects";
 
 export function Projects() {
 	const [api, setApi] = useState<CarouselApi>();
 	const [current, setCurrent] = useState(0);
 	const [count, setCount] = useState(0);
 	const { handleTranslatedText } = useLanguage();
+
+	const handleImage = (image: string) => {
+		switch (image) {
+			case EProjects.PROJECT_01:
+				return project01;
+			default:
+				return project01;
+		}
+	};
 
 	useEffect(() => {
 		if (!api) {
@@ -52,16 +64,37 @@ export function Projects() {
 				setApi={setApi}
 			>
 				<CarouselContent className="-mt-1 h-[400px]">
-					{Array.from({ length: 3 }).map((_, index) => (
+					{allProjects.map((project, index) => (
 						<CarouselItem key={index}>
 							<div className="h-full p-1">
-								<Card className="flex h-full cursor-pointer items-center justify-center px-6">
-									<CardContent className="flex h-full flex-col items-center justify-between p-0">
-										<Image src={project01.src} alt={`Project ${index + 1}`} width={630} height={630} />
+								<Link href={project.link} target="_blank" className="cursor-pointer">
+									<Card className="flex h-full items-center justify-center px-1">
+										<CardContent className="flex h-full w-full flex-col items-center justify-between px-5 py-0">
+											<div className="group text-transparent hover:text-black">
+												<Image
+													src={handleImage(project.value)}
+													alt={project.value}
+													width={1000}
+													height={1000}
+													className="relative rounded-2xl shadow-lg group-hover:opacity-20"
+												/>
+												<div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transform text-center">
+													<h3 className="mb-3 text-xl font-bold">
+														{handleTranslatedText("Projects", "Technologies")}:
+													</h3>
 
-										<p>teste</p>
-									</CardContent>
-								</Card>
+													<ul>
+														{project.tecnologies.map((tech, techIndex) => (
+															<li key={techIndex}>{tech}</li>
+														))}
+													</ul>
+												</div>
+											</div>
+
+											<p>{handleTranslatedText("Projects", project.value, "Label")}</p>
+										</CardContent>
+									</Card>
+								</Link>
 							</div>
 						</CarouselItem>
 					))}
@@ -70,7 +103,7 @@ export function Projects() {
 				<CarouselNext className="cursor-pointer" />
 			</Carousel>
 			<div className="text-muted-foreground -mt-6 w-full text-center text-sm">
-				Slide {current} of {count}
+				{handleTranslatedText("Projects", "Subtitle")} {current} {handleTranslatedText("Projects", "Of")} {count}
 			</div>
 		</section>
 	);

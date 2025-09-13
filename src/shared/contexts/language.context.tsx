@@ -33,7 +33,7 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
 	function handleTranslatedText(key: string, value: string, title?: string): string | string[] {
 		const translations: any = language === ELanguages.EN ? en : pt;
 
-		if (key === "Experiences" && title) {
+		if ((key === "Experiences" || key === "Projects") && title) {
 			return translations[key][value][title];
 		}
 
