@@ -110,17 +110,16 @@ export const en = {
 		[EServices.BACKEND]: {
 			Label: "Backend Development",
 			Description:
-				"Creation of robust and scalable systems, focusing on business logic and integration with databases, APIs, and servers. We work with modern technologies to ensure high performance, security, and stability in platforms such as SaaS, corporate systems, ERPs, CRMs, and custom solutions.",
+				"Creation of robust and scalable systems, focusing on business logic and integration with databases, APIs, and servers.",
 		},
 		[EServices.FRONTEND]: {
 			Label: "Frontend Development",
-			Description:
-				"Building modern, responsive, and intuitive interfaces that guarantee the best user experience. We use the latest frameworks and libraries to develop professional websites, blogs, e-commerce platforms, and landing pages with attractive design, optimized performance, and accessibility.",
+			Description: "Building modern, responsive, and intuitive interfaces that guarantee the best user experience.",
 		},
 		[EServices.FULLSTACK]: {
 			Label: "Fullstack Development",
 			Description:
-				"Complete solutions that bring together frontend and backend in a seamless flow. Perfect for projects that require end-to-end development, from UI design to business logic and infrastructure implementation. We deliver SaaS, marketplaces, e-commerce platforms, and custom systems with high quality and agility.",
+				"Complete solutions that bring together frontend and backend in a seamless flow. Perfect for projects that require end-to-end development, from UI design to business logic and infrastructure implementation.",
 		},
 	},
 	Skills: {

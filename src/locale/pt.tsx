@@ -110,17 +110,17 @@ export const pt = {
 		[EServices.BACKEND]: {
 			Label: "Desenolvimento Backend",
 			Description:
-				"Criação de sistemas robustos e escaláveis, focados na lógica de negócio e integração com bancos de dados, APIs e servidores. Trabalhamos com tecnologias modernas para garantir alta performance, segurança e estabilidade em plataformas como SaaS, sistemas corporativos, ERPs, CRMs e soluções personalizadas.",
+				"Criação de sistemas robustos e escaláveis, focados na lógica de negócio e integração com bancos de dados, APIs e servidores.",
 		},
 		[EServices.FRONTEND]: {
 			Label: "Desenvolvimento Frontend",
 			Description:
-				"Construção de interfaces modernas, responsivas e intuitivas, garantindo a melhor experiência para o usuário. Utilizamos frameworks e bibliotecas atuais para desenvolver sites profissionais, blogs, e-commerces e landing pages com design atrativo, performance otimizada e acessibilidade.",
+				"Construção de interfaces modernas, responsivas e intuitivas, garantindo a melhor experiência para o usuário.",
 		},
 		[EServices.FULLSTACK]: {
 			Label: "Desenvolvimento Fullstack",
 			Description:
-				"Soluções completas que unem frontend e backend em um único fluxo. Ideal para quem precisa de projetos end-to-end, desde o design da interface até a implementação da lógica de negócio e infraestrutura. Desenvolvemos SaaS, marketplaces, e-commerces e sistemas personalizados com alta qualidade e agilidade.",
+				"Soluções completas que unem frontend e backend em um único fluxo. Ideal para quem precisa de projetos end-to-end, desde o design da interface até a implementação da lógica de negócio e infraestrutura.",
 		},
 	},
 	Skills: {
