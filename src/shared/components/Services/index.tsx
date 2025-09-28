@@ -1,9 +1,10 @@
 "use client";
 
-import { FolderCode } from "lucide-react";
+import { Icon } from "@iconify/react/dist/iconify.js";
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { useLanguage } from "@/shared/contexts/language.context";
+import { allServices, servicesParsed } from "@/shared/data/services-parser";
 
 export function Services() {
 	const { handleTranslatedText } = useLanguage();
@@ -20,18 +21,20 @@ export function Services() {
 				</span>
 			</h2>
 
-			<div className="mx-auto max-w-xs">
-				<Card className="w-full max-w-sm">
-					<CardHeader>
-						<CardTitle>
-							<FolderCode />
-						</CardTitle>
-						<CardDescription>{handleTranslatedText("Services", "Type")}</CardDescription>
-					</CardHeader>
-					<CardContent>
-						<p className="text-sm">{handleTranslatedText("Services", "Description")}</p>
-					</CardContent>
-				</Card>
+			<div className="grid grid-cols-3 gap-3">
+				{allServices.map((service, index) => (
+					<Card key={index} className="w-full">
+						<CardHeader>
+							<CardTitle>
+								<Icon icon={servicesParsed[service.value].icon} width="30" />
+							</CardTitle>
+							<CardDescription>{handleTranslatedText("Services", service.value, "Label")}</CardDescription>
+						</CardHeader>
+						<CardContent>
+							<p className="text-sm">{handleTranslatedText("Services", service.value, "Description")}</p>
+						</CardContent>
+					</Card>
+				))}
 			</div>
 		</section>
 	);

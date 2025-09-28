@@ -1,0 +1,5 @@
+export enum EServices {
+	BACKEND = "BACKEND",
+	FRONTEND = "FRONTEND",
+	FULLSTACK = "FULLSTACK",
+}

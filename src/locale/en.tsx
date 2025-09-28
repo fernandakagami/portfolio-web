@@ -1,5 +1,6 @@
 import { EExperiences } from "@/shared/enums/experiences";
 import { EProjects } from "@/shared/enums/projects";
+import { EServices } from "@/shared/enums/services";
 
 export const en = {
 	Menu: {
@@ -97,15 +98,30 @@ export const en = {
 		Title: "Projects",
 		Subtitle: "Project",
 		Of: "of",
+		SeeProject: "See Project",
+		Code: "Code",
 		Technologies: "Technologies",
 		[EProjects.PROJECT_01]: {
 			Label: "Spider-man Multiverse Fan Page",
 		},
 	},
 	Services: {
-		Title: "Services",
-		Type: "Web Development",
-		Description: "Development of professional websites, blogs, SaaS, landing pages, ecommerce, systems, among others.",
+		Title: "Serviços",
+		[EServices.BACKEND]: {
+			Label: "Backend Development",
+			Description:
+				"Creation of robust and scalable systems, focusing on business logic and integration with databases, APIs, and servers. We work with modern technologies to ensure high performance, security, and stability in platforms such as SaaS, corporate systems, ERPs, CRMs, and custom solutions.",
+		},
+		[EServices.FRONTEND]: {
+			Label: "Frontend Development",
+			Description:
+				"Building modern, responsive, and intuitive interfaces that guarantee the best user experience. We use the latest frameworks and libraries to develop professional websites, blogs, e-commerce platforms, and landing pages with attractive design, optimized performance, and accessibility.",
+		},
+		[EServices.FULLSTACK]: {
+			Label: "Fullstack Development",
+			Description:
+				"Complete solutions that bring together frontend and backend in a seamless flow. Perfect for projects that require end-to-end development, from UI design to business logic and infrastructure implementation. We deliver SaaS, marketplaces, e-commerce platforms, and custom systems with high quality and agility.",
+		},
 	},
 	Skills: {
 		Title: "Skills",

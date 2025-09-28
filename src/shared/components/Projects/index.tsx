@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { Github, SquareArrowOutUpRight } from "lucide-react";
 
 import { Card, CardContent } from "@/components/ui/card";
 import {
@@ -17,6 +18,8 @@ import { useLanguage } from "@/shared/contexts/language.context";
 import project01 from "@/assets/images/project01.webp";
 import { allProjects } from "@/shared/data/projects-parser";
 import { EProjects } from "@/shared/enums/projects";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 
 export function Projects() {
 	const [api, setApi] = useState<CarouselApi>();
@@ -60,41 +63,60 @@ export function Projects() {
 				opts={{
 					align: "start",
 				}}
-				className="m-auto h-full w-full max-w-[200px] xl:max-w-2xl"
+				className="m-auto h-full w-full max-w-[200px] xl:max-w-3xl"
 				setApi={setApi}
 			>
 				<CarouselContent className="-mt-1 h-[400px]">
 					{allProjects.map((project, index) => (
 						<CarouselItem key={index}>
 							<div className="h-full p-1">
-								<Link href={project.link} target="_blank" className="cursor-pointer">
-									<Card className="flex h-full items-center justify-center px-1">
-										<CardContent className="flex h-full w-full flex-col items-center justify-between px-5 py-0">
-											<div className="group text-transparent hover:text-black">
-												<Image
-													src={handleImage(project.value)}
-													alt={project.value}
-													width={1000}
-													height={1000}
-													className="relative rounded-2xl shadow-lg group-hover:opacity-20"
-												/>
-												<div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transform text-center">
-													<h3 className="mb-3 text-xl font-bold">
-														{handleTranslatedText("Projects", "Technologies")}:
-													</h3>
+								<Card className="flex h-full items-center justify-center px-1">
+									<CardContent className="flex h-full w-full flex-row items-center justify-center gap-8 px-5 py-5">
+										<div className="w-3/5">
+											<Image
+												src={handleImage(project.value)}
+												alt={project.value}
+												width={1000}
+												height={1000}
+												className="rounded-2xl shadow-lg group-hover:opacity-20"
+											/>
+										</div>
 
-													<ul>
-														{project.tecnologies.map((tech, techIndex) => (
-															<li key={techIndex}>{tech}</li>
-														))}
-													</ul>
-												</div>
+										<div className="flex w-2/5 flex-col gap-6">
+											<h3 className="text-3xl font-bold">{handleTranslatedText("Projects", project.value, "Label")}</h3>
+
+											<div className="mb-6">
+												<p className="mb-2 text-lg font-bold text-gray-600">
+													{handleTranslatedText("Projects", "Technologies")}
+												</p>
+
+												<ul className="flex flex-wrap gap-2">
+													{project.tecnologies.map((tech, techIndex) => (
+														<li key={techIndex}>
+															<Badge variant="outline">{tech}</Badge>
+														</li>
+													))}
+												</ul>
 											</div>
 
-											<p>{handleTranslatedText("Projects", project.value, "Label")}</p>
-										</CardContent>
-									</Card>
-								</Link>
+											<div className="flex flex-row gap-3">
+												<Button size="lg" asChild>
+													<Link href={project.link} target="_blank" className="cursor-pointer">
+														<SquareArrowOutUpRight size={20} />
+														{handleTranslatedText("Projects", "SeeProject")}
+													</Link>
+												</Button>
+
+												<Button size="lg" variant="outline" asChild>
+													<Link href={project.github} target="_blank" className="cursor-pointer">
+														<Github size={20} />
+														{handleTranslatedText("Projects", "Code")}
+													</Link>
+												</Button>
+											</div>
+										</div>
+									</CardContent>
+								</Card>
 							</div>
 						</CarouselItem>
 					))}
