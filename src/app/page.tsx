@@ -10,7 +10,7 @@ import Contact from "@/shared/components/Contact";
 export default function Home() {
 	return (
 		<>
-			<div className="flex flex-col items-center justify-evenly gap-2 xl:gap-0">
+			<div className="flex flex-col items-center justify-evenly gap-2 lg:gap-0">
 				<AboutMe />
 				<Experiences />
 				<Projects />
@@ -19,7 +19,7 @@ export default function Home() {
 				<Contact />
 			</div>
 
-			<MyImage className="not-sr-only p-10 xl:sr-only" />
+			<MyImage className="not-sr-only p-10 lg:sr-only" />
 
 			<FooterMobile />
 		</>

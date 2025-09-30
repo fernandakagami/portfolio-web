@@ -9,7 +9,7 @@ export const pt = {
 		Projects: "Projetos",
 		Services: "Serviços",
 		Skills: "Habilidades",
-		Contact: "Entre em Contato",
+		Contact: "Contato",
 		Rights: "Todos os direitos reservados.",
 	},
 	AboutMe: {

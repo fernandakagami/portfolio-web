@@ -17,14 +17,14 @@ export default function Menu() {
 	const { handleTranslatedText, toggleLanguage, language } = useLanguage();
 
 	return (
-		<div className="sticky top-0 left-0 z-50 flex h-24 w-screen flex-row items-center justify-between bg-black py-0 ps-10 pe-10 text-white xl:top-0 xl:h-screen xl:w-72 xl:flex-col xl:items-start xl:py-24 xl:ps-12 xl:pe-12 2xl:pe-0">
+		<div className="!sticky top-0 left-0 z-50 flex h-24 w-screen flex-row items-center justify-between bg-black py-0 ps-10 pe-10 text-white lg:top-0 lg:h-screen lg:w-[288px] lg:flex-col lg:items-start lg:px-24 lg:py-12">
 			<div className={pacifico.className}>
 				<h1 className="text-5xl">Fer.</h1>
 			</div>
 
 			<DropdownMobile />
 
-			<ul className="sr-only mt-10 mb-40 flex flex-col justify-center gap-4 xl:not-sr-only">
+			<ul className="sr-only mt-10 mb-40 flex flex-col justify-center gap-4 lg:not-sr-only">
 				<li className="cursor-pointer">
 					<Link href="#about">{handleTranslatedText("Menu", "About")}</Link>
 				</li>
@@ -41,14 +41,11 @@ export default function Menu() {
 					<Link href="#skills">{handleTranslatedText("Menu", "Skills")}</Link>
 				</li>
 				<li className="cursor-pointer">
-					<Link href="#skills">{handleTranslatedText("Menu", "Skills")}</Link>
-				</li>
-				<li className="cursor-pointer">
 					<Link href="#contact">{handleTranslatedText("Menu", "Contact")}</Link>
 				</li>
 			</ul>
 
-			<div className="sr-only xl:not-sr-only">
+			<div className="sr-only lg:not-sr-only">
 				<ul className="mb-10">
 					<li className="mb-2 flex flex-row items-center gap-2">
 						<a href="https://github.com/fernandakagami" target="_blank">

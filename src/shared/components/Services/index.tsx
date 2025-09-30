@@ -12,7 +12,7 @@ export function Services() {
 	return (
 		<section
 			id="services"
-			className="flex w-full flex-col items-start justify-center gap-10 px-10 pb-10 xl:px-0 xl:pb-16"
+			className="flex w-full scroll-mt-[100px] flex-col items-start justify-center gap-10 px-10 pb-10 md:px-20 lg:scroll-mt-0 lg:px-0 lg:pb-16"
 		>
 			<h2 className="text-4xl">
 				{handleTranslatedText("Services", "Title")}{" "}
@@ -21,7 +21,7 @@ export function Services() {
 				</span>
 			</h2>
 
-			<div className="grid grid-cols-3 gap-3">
+			<div className="flex flex-col gap-6 lg:grid lg:grid-cols-3 lg:gap-3">
 				{allServices.map((service, index) => (
 					<Card key={index} className="w-full">
 						<CardHeader>

@@ -19,10 +19,15 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="pt">
-			<body className={`flex ${open.className} flex-col xl:flex-row`}>
+			<body className={`flex ${open.className} flex-col lg:flex-row`}>
 				<Providers>
 					<Menu />
-					<main className="mx-auto w-full max-w-screen px-0 xl:max-w-5xl xl:px-10">{children}</main>
+					<main
+						id="about"
+						className="mx-auto w-full max-w-screen scroll-mt-[250px] !overflow-x-scroll px-0 lg:max-w-5xl lg:px-10"
+					>
+						{children}
+					</main>
 				</Providers>
 			</body>
 		</html>

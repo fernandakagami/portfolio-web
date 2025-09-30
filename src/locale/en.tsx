@@ -106,7 +106,7 @@ export const en = {
 		},
 	},
 	Services: {
-		Title: "Serviços",
+		Title: "Services",
 		[EServices.BACKEND]: {
 			Label: "Backend Development",
 			Description:

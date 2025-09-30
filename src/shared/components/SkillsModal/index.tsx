@@ -23,7 +23,7 @@ export function SkillsModal({ skill, description }: SkillsModalProps) {
 					</CardContent>
 				</Card>
 			</DialogTrigger>
-			<DialogContent className="xl:max-w-md" aria-describedby={undefined}>
+			<DialogContent className="lg:max-w-md" aria-describedby={undefined}>
 				<DialogTitle className="DialogTitle">
 					<p className="bg-gradient-to-r from-pink-500 via-indigo-400 to-orange-500 bg-clip-text text-lg text-transparent">
 						{skill.label}

@@ -50,7 +50,7 @@ export function Projects() {
 	return (
 		<section
 			id="projects"
-			className="flex w-full flex-col items-start justify-center gap-10 px-10 pb-10 xl:px-0 xl:pb-16"
+			className="flex w-full scroll-mt-[100px] flex-col items-start justify-center gap-10 px-10 pb-10 md:px-20 lg:scroll-mt-0 lg:px-0 lg:pb-16"
 		>
 			<h2 className="text-4xl">
 				{handleTranslatedText("Projects", "Title")}{" "}
@@ -63,16 +63,16 @@ export function Projects() {
 				opts={{
 					align: "start",
 				}}
-				className="m-auto h-full w-full max-w-[200px] xl:max-w-3xl"
+				className="m-0 h-full w-full lg:m-auto lg:max-w-3xl"
 				setApi={setApi}
 			>
-				<CarouselContent className="-mt-1 h-[400px]">
+				<CarouselContent className="-mt-1 h-full lg:h-[400px]">
 					{allProjects.map((project, index) => (
 						<CarouselItem key={index}>
 							<div className="h-full p-1">
 								<Card className="flex h-full items-center justify-center px-1">
-									<CardContent className="flex h-full w-full flex-row items-center justify-center gap-8 px-5 py-5">
-										<div className="w-3/5">
+									<CardContent className="flex h-full w-full flex-col items-center justify-center gap-8 px-5 py-5 lg:flex-row">
+										<div className="w-full lg:w-3/5">
 											<Image
 												src={handleImage(project.value)}
 												alt={project.value}
@@ -82,8 +82,10 @@ export function Projects() {
 											/>
 										</div>
 
-										<div className="flex w-2/5 flex-col gap-6">
-											<h3 className="text-3xl font-bold">{handleTranslatedText("Projects", project.value, "Label")}</h3>
+										<div className="flex w-full flex-col gap-6 lg:w-2/5">
+											<h3 className="text-center text-xl font-bold lg:text-left lg:text-3xl">
+												{handleTranslatedText("Projects", project.value, "Label")}
+											</h3>
 
 											<div className="mb-6">
 												<p className="mb-2 text-lg font-bold text-gray-600">
@@ -99,7 +101,7 @@ export function Projects() {
 												</ul>
 											</div>
 
-											<div className="flex flex-row gap-3">
+											<div className="flex flex-col gap-3 lg:flex-row">
 												<Button size="lg" asChild>
 													<Link href={project.link} target="_blank" className="cursor-pointer">
 														<SquareArrowOutUpRight size={20} />
@@ -121,8 +123,8 @@ export function Projects() {
 						</CarouselItem>
 					))}
 				</CarouselContent>
-				<CarouselPrevious className="cursor-pointer" />
-				<CarouselNext className="cursor-pointer" />
+				<CarouselPrevious className="sr-only cursor-pointer lg:not-sr-only" />
+				<CarouselNext className="sr-only cursor-pointer lg:not-sr-only" />
 			</Carousel>
 			<div className="text-muted-foreground -mt-6 w-full text-center text-sm">
 				{handleTranslatedText("Projects", "Subtitle")} {current} {handleTranslatedText("Projects", "Of")} {count}

@@ -13,7 +13,7 @@ export default function Contact() {
 	return (
 		<section
 			id="contact"
-			className="flex w-full flex-col items-start justify-center gap-10 px-10 pb-10 xl:px-0 xl:pb-16"
+			className="flex w-full scroll-mt-[100px] flex-col items-start justify-center gap-10 px-10 pb-10 md:px-20 lg:scroll-mt-0 lg:px-0 lg:pb-16"
 		>
 			<h2 className="text-4xl">
 				{handleTranslatedText("Contact", "Title")}{" "}
@@ -24,7 +24,7 @@ export default function Contact() {
 
 			<Card className="mx-auto w-full max-w-xl">
 				<CardHeader className="text-center">
-					<CardTitle className="text-lg font-semibold md:text-3xl">
+					<CardTitle className="text-lg font-semibold lg:text-3xl">
 						{handleTranslatedText("Contact", "Reach")}
 					</CardTitle>
 
